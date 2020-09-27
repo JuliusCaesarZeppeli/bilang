@@ -6,7 +6,24 @@
     <title>bilang</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">鹅鹅鹅,曲项向天歌,白毛浮绿水,红掌拨清波</div>
     <!-- built files will be auto injected -->
+    <script>
+      //  转变rem布局
+      fnResize();
+      window.onresize = function () {
+        fnResize();
+      }
+      function fnResize() {
+        var deviceWidth = document.documentElement.clientWidth || window.innerWidth;
+        if (deviceWidth >= 750) {
+          deviceWidth = 750;
+        }
+        if (deviceWidth <= 320) {
+          deviceWidth = 320;
+        }
+        document.documentElement.style.fontSize = (deviceWidth / 7.5) + 'px';
+      }
+    </script>
   </body>
 </html>
