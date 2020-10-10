@@ -27,7 +27,7 @@
 
 <script>
   export default {
-    name: 'h5page1',
+    name: 'Measurementsneck',
     data () {
       return {
       }

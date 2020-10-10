@@ -39,7 +39,7 @@
 
 <script>
   export default {
-    name: 'h5page1',
+    name: 'h5page3',
     data () {
       return {
       }

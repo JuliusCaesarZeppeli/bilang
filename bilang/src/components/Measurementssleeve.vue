@@ -27,7 +27,7 @@
 
 <script>
   export default {
-    name: 'h5page1',
+    name: 'Measurementssleeve',
     data () {
       return {
       }

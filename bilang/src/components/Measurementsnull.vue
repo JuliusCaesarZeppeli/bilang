@@ -64,7 +64,7 @@
 
 <script>
   export default {
-    name: 'h5page1',
+    name: 'Measurementsnull',
     data () {
       return {
       }
