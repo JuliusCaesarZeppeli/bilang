@@ -33,33 +33,36 @@
     <div class='productQuality dis_padd '>
       <P>
         <span>产品质量</span>
-        <span>
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-        </span>
+        <van-rate
+          v-model="value"
+          :size="5"
+          color='blue'
+          void-icon="star"
+          void-color=""
+          name='1'
+        />
       </P>
       <P>
         <span>服务态度</span>
-        <span>
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-        </span>
+        <van-rate
+          v-model="value"
+          :size="5"
+          color='blue'
+          void-icon="star"
+          void-color=""
+          name='2'
+        />
       </P>
       <P>
         <span>尺寸合适</span>
-        <span>
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-        </span>
+        <van-rate
+          v-model="value"
+          :size="5"
+          color='blue'
+          void-icon="star"
+          void-color=""
+          name='3'
+        />
       </P>
     </div>
     <div class='content_nav dis_padd'>
@@ -72,33 +75,36 @@
     <div class='productQuality dis_padd '>
       <P>
         <span>产品质量</span>
-        <span>
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-        </span>
+        <van-rate
+          v-model="value"
+          :size="5"
+          color='blue'
+          void-icon="star"
+          void-color=""
+          name='4'
+        />
       </P>
       <P>
         <span>服务态度</span>
-        <span>
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-        </span>
+        <van-rate
+          v-model="value"
+          :size="5"
+          color='blue'
+          void-icon="star"
+          void-color=""
+          name='5'
+        />
       </P>
       <P>
         <span>尺寸合适</span>
-        <span>
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-          <img src="../assets/images/全部评价/icon_01.png">
-        </span>
+        <van-rate
+          v-model="value"
+          :size="5"
+          color='blue'
+          void-icon="star"
+          void-color=""
+          name='6'
+        />
       </P>
     </div>
     <div class='View dis_padd'>
@@ -141,7 +147,12 @@
 </template>
 <script>
 export default {
-  
+  name:'SingleProduct',
+  data(){
+    return{
+      value:0,
+    }
+  }
 }
 </script>
 <style scoped>
@@ -160,7 +171,7 @@ img{width:100%;height:100%;}
 .content_img{display:flex;margin-bottom:.3rem;}
 .content_img>img{width:1.1rem;height:1.1rem;margin-right:.15rem;}
 .productQuality{width:100%;height:.5rem;display:flex;align-items:center;align-items:center;margin-bottom:.3rem;}
-.productQuality>p{margin-right:.2rem;}
+.productQuality>p{margin-right:.3rem;}
 .productQuality img{width:.17rem;height:.18rem;}
 .productQuality span{color:#999999;}
 .View{width:2.07rem;height:.53rem;border:.01rem solid #C7C7C7;text-align:center;line-height:.53rem;margin:0 auto;color:red;margin:.8rem auto .3rem;border-radius:.15rem;}

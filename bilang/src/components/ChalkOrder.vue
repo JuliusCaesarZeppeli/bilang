@@ -56,7 +56,7 @@
           </div>
         </div>
       </van-tab>
-      <van-tab title="一级粉笔" name="b" class='activeName_text'> 
+      <van-tab title="二级粉笔" name="b" class='activeName_text'> 
         <div class='content'>
           <p>1</p>
           <p><img src='../assets/images/个人信息/个人信息(绑定手机）狮子_03.png'></p>

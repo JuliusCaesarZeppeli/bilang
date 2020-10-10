@@ -27,7 +27,6 @@ export default {
 }
 .van-icon::before {
     display: inline-block;
-    color:#fff;
 }
 
 .van-tab--active {

@@ -12,7 +12,7 @@
     <!-- 导航下轮播那块 -->
     <div class='content_center'>
     <!-- 轮播 -->
-      <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
+      <van-swipe class="my-swipe" :autoplay="2000" indicator-color="white">
         <van-swipe-item>
           <img src="../assets/images/时尚精选/pic_01.png" alt="">
         </van-swipe-item>
