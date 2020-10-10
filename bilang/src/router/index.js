@@ -23,111 +23,183 @@ import Wallet from '@/components/Wallet'
 import Detail from '@/components/Detail'
 import Fashion from '@/components/Fashion'
 import Sale from '@/components/Sale'
+import h5page1 from '@/components/h5page1'
+import h5page2 from '@/components/h5page2'
+import h5page3 from '@/components/h5page3'
+import h5page4 from '@/components/h5page4'
+import h5page6 from '@/components/h5page6'
+import Measurementsnull from '@/components/Measurementsnull'
+import Measurements from '@/components/Measurements'
+import Measurementsshoulder from '@/components/Measurementsshoulder'
+import Measurementsneck from '@/components/Measurementsneck'
+import Measurementshipline from '@/components/Measurementshipline'
+import Measurementschest from '@/components/Measurementschest'
+import Measurementssleeve from '@/components/Measurementssleeve'
 Vue.use(Router)
 
 export default new Router({
-  routes: [{
-    path: '/HelloWorld',
-    name: 'HelloWorld',
-    component: HelloWorld
-},
-{
-    path: '/',
-    name: 'Order',
-    component: Order
-},
-{
-    path: '/Share',
-    name: 'Share',
-    component: Share
-},
-{
-    path: '/bill',
-    name: 'Bill',
-    component: Bill
-},
-{
-    path: '/collect',
-    name: 'Collect',
-    component: Collect
-},
-{
-    path: '/fans',
-    name: 'Fans',
-    component: Fans
-},
-{
-    path: '/coupon',
-    name: 'Coupon',
-    component: Coupon
-},
-{
-    path: '/wallet',
-    name: 'Wallet',
-    component: Wallet
-},
-{
-    path: '/detail',
-    name: 'Detail',
-    component: Detail
-},
-{
-    path: '/fashion',
-    name: 'Fashion',
-    component: Fashion
-},
-{
-    path: '/sale',
-    name: 'Sale',
-    component: Sale
-},{
-      path:'/PersonalInformation',
-      name:'PersonalInformation',
-      component:PersonalInformation
-    },{
-      path:'/ChalkOrder',
-      name:'ChalkOrder',
-      component:ChalkOrder
-    },{
-      path:'/SignIn',
-      name:'SignIn',
-      component:SignIn
-    },{
-      path:'/SingleProduct',
-      name:'SingleProduct',
-      component:SingleProduct
-    },{
-      path:'/Single',
-      name:'Single',
-      component:Single
-    },{
-      path:'/FashionInfo',
-      name:'FashionInfo',
-      component:FashionInfo
-    },{
-      path:'/Length',
-      name:'Length',
-      component:Length
-    },{
-      path:'/WaistCircumference',
-      name:'WaistCircumference',
-      component:WaistCircumference
-    },{
-      path:'/SleeveLength',
-      name:'SleeveLength',
-      component:SleeveLength
-    },{
-      path:'/Cuff',
-      name:'Cuff',
-      component:Cuff
-    },{
-      path:'/SleeveFat',
-      name:'SleeveFat',
-      component:SleeveFat
-    },{
-      path:'/ProductList',
-      name:'ProductList',
-      component:ProductList
-    }
-  ]
+    routes: [{
+            path: '/HelloWorld',
+            name: 'HelloWorld',
+            component: HelloWorld
+        },
+        {
+            path: '/',
+            name: 'Order',
+            component: Order
+        },
+        {
+            path: '/Share',
+            name: 'Share',
+            component: Share
+        },
+        {
+            path: '/bill',
+            name: 'Bill',
+            component: Bill
+        },
+        {
+            path: '/collect',
+            name: 'Collect',
+            component: Collect
+        },
+        {
+            path: '/fans',
+            name: 'Fans',
+            component: Fans
+        },
+        {
+            path: '/coupon',
+            name: 'Coupon',
+            component: Coupon
+        },
+        {
+            path: '/wallet',
+            name: 'Wallet',
+            component: Wallet
+        },
+        {
+            path: '/detail',
+            name: 'Detail',
+            component: Detail
+        },
+        {
+            path: '/fashion',
+            name: 'Fashion',
+            component: Fashion
+        },
+        {
+            path: '/sale',
+            name: 'Sale',
+            component: Sale
+        }, {
+            path: '/PersonalInformation',
+            name: 'PersonalInformation',
+            component: PersonalInformation
+        }, {
+            path: '/ChalkOrder',
+            name: 'ChalkOrder',
+            component: ChalkOrder
+        }, {
+            path: '/SignIn',
+            name: 'SignIn',
+            component: SignIn
+        }, {
+            path: '/SingleProduct',
+            name: 'SingleProduct',
+            component: SingleProduct
+        }, {
+            path: '/Single',
+            name: 'Single',
+            component: Single
+        }, {
+            path: '/FashionInfo',
+            name: 'FashionInfo',
+            component: FashionInfo
+        }, {
+            path: '/Length',
+            name: 'Length',
+            component: Length
+        }, {
+            path: '/WaistCircumference',
+            name: 'WaistCircumference',
+            component: WaistCircumference
+        }, {
+            path: '/SleeveLength',
+            name: 'SleeveLength',
+            component: SleeveLength
+        }, {
+            path: '/Cuff',
+            name: 'Cuff',
+            component: Cuff
+        }, {
+            path: '/SleeveFat',
+            name: 'SleeveFat',
+            component: SleeveFat
+        }, {
+            path: '/ProductList',
+            name: 'ProductList',
+            component: ProductList
+        },
+        {
+            path: '/h5page1',
+            name: 'h5page1',
+            component: h5page1
+        },
+        {
+            path: '/h5page2',
+            name: 'h5page2',
+            component: h5page2
+        },
+        {
+            path: '/h5page3',
+            name: 'h5page3',
+            component: h5page3
+        },
+        {
+            path: '/h5page4',
+            name: 'h5page4',
+            component: h5page4
+        },
+        {
+            path: '/h5page6',
+            name: 'h5page6',
+            component: h5page6
+        },
+        {
+            path: '/Measurementsnull',
+            name: 'Measurementsnull',
+            component: Measurementsnull
+        },
+        {
+            path: '/Measurements',
+            name: 'Measurements',
+            component: Measurements
+        },
+        {
+            path: '/Measurementsshoulder',
+            name: 'Measurementsshoulder',
+            component: Measurementsshoulder
+        },
+        {
+            path: '/Measurementsneck',
+            name: 'Measurementsneck',
+            component: Measurementsneck
+        },
+        {
+            path: '/Measurementshipline',
+            name: 'Measurementshipline',
+            component: Measurementshipline
+        },
+        {
+            path: '/Measurementschest',
+            name: 'Measurementschest',
+            component: Measurementschest
+        },
+        {
+            path: '/Measurementssleeve',
+            name: 'Measurementssleeve',
+            component: Measurementssleeve
+        }
+    ]
 })
