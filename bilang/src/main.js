@@ -3,13 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import {Swipe, Tab, Tabs,Picker,Toast,Overlay,SwipeItem} from 'vant'
+import { NavBar, Toast, Tab, Tabs, Swipe, SwipeItem, CountDown,Overlay,Picker } from 'vant';
+
 Vue.config.productionTip = false
-Vue.use(Tab).use(Tabs).use(Picker).use(Toast).use(Overlay).use(SwipeItem).use(Swipe)
-/* eslint-disable no-new */
+Vue.use(NavBar).use(Toast).use(Tab).use(Tabs).use(Swipe).use(SwipeItem).use(CountDown).use(Picker).use(Overlay)
+    /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+    el: '#app',
+    router,
+    components: { App },
+    template: '<App/>'
 })
