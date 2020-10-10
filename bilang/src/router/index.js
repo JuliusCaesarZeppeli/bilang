@@ -35,6 +35,16 @@ import Measurementsneck from '@/components/Measurementsneck'
 import Measurementshipline from '@/components/Measurementshipline'
 import Measurementschest from '@/components/Measurementschest'
 import Measurementssleeve from '@/components/Measurementssleeve'
+import Pages from '@/components/Pages'
+import Message from '@/components/Message'
+import Cart from '@/components/Cart'
+import Site from '@/components/Site'
+import Integral from '@/components/Integral'
+import Exchange from '@/components/Exchange'
+import Fashione from '@/components/Fashione'
+import Evaluate from '@/components/Evaluate'
+import All from '@/components/All'
+import Fill from '@/components/Fill'
 Vue.use(Router)
 
 export default new Router({
@@ -45,8 +55,8 @@ export default new Router({
         },
         {
             path: '/',
-            name: 'Order',
-            component: Order
+            name: 'Pages',
+            component: Pages
         },
         {
             path: '/Share',
@@ -200,6 +210,56 @@ export default new Router({
             path: '/Measurementssleeve',
             name: 'Measurementssleeve',
             component: Measurementssleeve
-        }
+        },
+        {
+            path: '/Fill',
+            name: 'Fill',
+            component: Fill
+        },
+        {
+            path:'/Message',
+            name:'Message',
+            component:Message
+          },
+          {
+            path:'/Cart',
+            name:'Cart',
+            component:Cart
+          },
+          {
+            path:'/Site',
+            name:'Site',
+            component:Site
+          },
+          {
+            path:'/Integral',
+            name:'Integral',
+            component:Integral
+          },
+          {
+            path:'/Exchange',
+            name:'Exchange',
+            component:Exchange
+          },
+          {
+            path:'/Fashione',
+            name:'Fashione',
+            component:Fashione
+          },
+          {
+            path:'/Evaluate',
+            name:'Evaluate',
+            component:Evaluate
+          },
+          {
+            path:'/All',
+            name:'All',
+            component:All
+          },
+          {
+              path: '/Order',
+              name: 'Order',
+              component: Order
+          }
     ]
 })
