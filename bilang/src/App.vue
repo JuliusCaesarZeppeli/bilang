@@ -15,6 +15,9 @@ export default {
   margin: 0;
   padding: 0;
 }
+.van-nav-bar{
+  background:#000;
+}
 .van-nav-bar__text {
     color: #fff;
 }
