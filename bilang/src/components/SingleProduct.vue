@@ -203,7 +203,7 @@ img{width:100%;height:100%;}
 .ThreeBars{width:1.2rem;height:1.2rem;position:fixed;top:1.3rem;left:0;}
  .my-swipe .van-swipe-item {
     color: #fff;
-    height:7rem;
+    height:8rem;
     font-size: 20px;
     line-height: 150px;
     text-align: center;
