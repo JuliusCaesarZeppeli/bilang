@@ -28,11 +28,11 @@
       <div class="input_">
         <img src="../assets/images/注册/login_icon_3.png" >
         <img src="../assets/images/注册/border.png">
-        <input type="text" placeholder="请输入手机号码">
-        <img src="../assets/images/注册/login_icon_4.png">
+        <input :type="type_" placeholder="请输入密码">
+        <img src="../assets/images/注册/login_icon_4.png" @click="conceal">
       </div>
     </div>
-    <div class="please_read"><img src="../assets/images/注册/iconfont.png"><span>请阅读</span><span>《注册须知》</span></div>
+    <div class="please_read" @click="alterImg()"><img :src="img"><span>请阅读</span><span>《注册须知》</span></div>
     <div class="btn" @click="$router.push({name:'SignIn'})">
       <button >注册</button>
     </div>
@@ -43,7 +43,8 @@ export default {
   name:"Register",
   data(){
     return {
-
+      type_ : "password",
+      img : "../../static/images/iconfont.png"
     }
   },
   methods: {
@@ -53,7 +54,22 @@ export default {
   onClickRight() {
     this.$toast('按钮');
   },
+  conceal(){
+    if(this.type_ == "password"){
+      this.type_ = "text";
+    }else{
+      this.type_ = "password"
+    }
   },
+  alterImg(){
+    if(this.img == "../../static/images/iconfont.png"){
+      this.img = "../../static/images/iconfont_.png"
+    }else{
+      this.img = "../../static/images/iconfont.png"
+    }
+  }
+  },
+  
 }
 </script>
 <style scoped>
