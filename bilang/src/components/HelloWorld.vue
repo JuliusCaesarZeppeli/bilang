@@ -20,7 +20,7 @@ export default {
     return {
       
     }
-  },
+  }, 
   methods: {
     onClickLeft() {
       this.$toast('返回');
