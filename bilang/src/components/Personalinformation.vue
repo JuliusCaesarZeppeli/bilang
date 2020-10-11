@@ -9,14 +9,16 @@
     <p>个人信息</p>
     <p>● ● ●</p>
   </div>
-  <div class="document_text">
+   <div class="document_text">
     <!-- 头像 -->
     <div class="Avatar">
       <p>头像</p>
-      <p>
-        <img src="../assets/images/个人信息/个人信息(绑定手机）狮子_03.png">
-        <img src="../assets/images/个人信息\个人信息(绑定手机）_03.png">
-      </p>
+      <div>
+        <p>
+          <img src="../assets/images/个人信息/个人信息(绑定手机）狮子_03.png">
+          <img src="../assets/images/个人信息/个人信息(绑定手机）_03.png">
+        </p>
+      </div>
     </div>
     <!-- 昵称 -->
     <div class="body nickname">
@@ -96,14 +98,17 @@ export default {
 .document_nav{display:flex;align-items:center;color:white;font-size:.34rem;width:100%;height:1rem;background:black;justify-content:space-between;margin-bottom:.2rem;padding-right:.1rem;box-sizing:border-box;}
 .document_text{width:100%;padding-left:.15rem;padding-right:.15rem;box-sizing:border-box;background:white;}
 .Avatar{border-bottom:.005rem solid #E1E1E1;display:flex;justify-content:space-between;font-size:.26rem;color:#333333;}
-.Avatar>p{width:100%;height:1.5rem;display:flex;align-items:center;}
-.Avatar img:nth-of-type(1){width:.8rem;height:.8rem;margin:0 .2rem 0 3rem;;} 
+.Avatar>p:nth-of-type(1){width:20%;height:1.5rem;display:flex;align-items:center;}
+.Avatar>div:nth-of-type(1){width:80%;height:1.5rem;display:flex;align-items:center;padding-right:.5rem;}
+.Avatar>div>p{width:1.3rem;display:flex;align-items:center;margin-left:auto;}
+.Avatar img:nth-of-type(1){width:.8rem;height:.8rem;margin-right:.2rem;} 
 .Avatar img:nth-of-type(2){width:.3rem;height:.27rem;} 
 .body{width:100%;height:1rem;display:flex;font-size:.26rem;color:#333333;}
-.body>p{width:100%;height:100%;align-items:center;display:flex;border-bottom:.005rem solid #E1E1E1;}
+.body>p{height:100%;align-items:center;display:flex;border-bottom:.005rem solid #E1E1E1;}
 .body>p:nth-of-type(1){width:20%;}
-.body>p>input{width:4rem;border:none;outline:none;color:#333333;margin-right:1.66rem;}
+.body>p>input{width:3rem;border:none;outline:none;color:#333333;}
 .body>p:nth-of-type(2)>img{width:.3rem;height:.27rem;}
+.body>p:nth-of-type(2){width:80%;display:flex;justify-content:space-between;padding-right:.5rem;box-sizing:border-box;}
 .die{width:100%;height:2rem;margin-top:2rem;text-align:center;}
 .die>button{width:6.9rem;height:1rem;background:#234497;color:white;font-size:.3rem;border:none;outline:none;}
 </style>
