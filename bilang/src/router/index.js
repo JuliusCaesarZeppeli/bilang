@@ -35,7 +35,6 @@ import Measurementsneck from '@/components/Measurementsneck'
 import Measurementshipline from '@/components/Measurementshipline'
 import Measurementschest from '@/components/Measurementschest'
 import Measurementssleeve from '@/components/Measurementssleeve'
-<<<<<<< HEAD
 import Pages from '@/components/Pages'
 import Message from '@/components/Message'
 import Cart from '@/components/Cart'
@@ -46,7 +45,6 @@ import Fashione from '@/components/Fashione'
 import Evaluate from '@/components/Evaluate'
 import All from '@/components/All'
 import Fill from '@/components/Fill'
-=======
 import My_address from '@/components/My_address'
 import Add_address from '@/components/Add_address'
 import Register from '@/components/Register'
@@ -59,7 +57,7 @@ import Weight from '@/components/Weight'
 import Hipline from '@/components/Hipline'
 import Chest from '@/components/Chest'
 import Waistline from '@/components/Waistline'
->>>>>>> a3ef0b85b67d9961af6a627d66855930085fd947
+
 Vue.use(Router)
 
 export default new Router({
@@ -225,7 +223,6 @@ export default new Router({
             path: '/Measurementssleeve',
             name: 'Measurementssleeve',
             component: Measurementssleeve
-<<<<<<< HEAD
         },
         {
             path: '/Fill',
@@ -276,9 +273,8 @@ export default new Router({
               path: '/Order',
               name: 'Order',
               component: Order
-          }
-=======
-        }, {
+          },
+         {
             path: '/My_address',
             name: 'My_address',
             component: My_address
@@ -327,6 +323,5 @@ export default new Router({
             name: 'Waistline',
             component: Waistline
         }
->>>>>>> a3ef0b85b67d9961af6a627d66855930085fd947
     ]
 })
