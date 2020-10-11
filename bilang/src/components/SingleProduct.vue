@@ -39,29 +39,26 @@
           color='blue'
           void-icon="star"
           void-color=""
-          name='1'
         />
       </P>
       <P>
         <span>服务态度</span>
         <van-rate
-          v-model="value"
+          v-model="value2"
           :size="5"
           color='blue'
           void-icon="star"
           void-color=""
-          name='2'
         />
       </P>
       <P>
         <span>尺寸合适</span>
         <van-rate
-          v-model="value"
+          v-model="value3"
           :size="5"
           color='blue'
           void-icon="star"
           void-color=""
-          name='3'
         />
       </P>
     </div>
@@ -76,34 +73,31 @@
       <P>
         <span>产品质量</span>
         <van-rate
-          v-model="value"
+          v-model="value4"
           :size="5"
           color='blue'
           void-icon="star"
           void-color=""
-          name='4'
         />
       </P>
       <P>
         <span>服务态度</span>
         <van-rate
-          v-model="value"
+          v-model="value5"
           :size="5"
           color='blue'
           void-icon="star"
           void-color=""
-          name='5'
         />
       </P>
       <P>
         <span>尺寸合适</span>
         <van-rate
-          v-model="value"
+          v-model="value6"
           :size="5"
           color='blue'
           void-icon="star"
           void-color=""
-          name='6'
         />
       </P>
     </div>
@@ -156,6 +150,11 @@ export default {
   data(){
     return{
       value:0,
+      value6:0,
+      value2:0,
+      value3:0,
+      value4:0,
+      value5:0,
     }
   }
 }
