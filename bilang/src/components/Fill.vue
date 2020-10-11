@@ -82,7 +82,7 @@
             <span>实付款:  </span>
             <span>￥6000.00</span>
         </div>
-        <div class="bottom_three_two">
+        <div class="bottom_three_two" @click="$router.push('/Order')">
           <img src="../assets/images/结算/icon_1.png">
           <span>提交订单</span>
         </div>
@@ -98,7 +98,7 @@ export default {
   },
    methods: {
     onClickLeft() {
-      this.$toast('返回');
+      this.$router.go(-1);
     },
     onClickRight() {
       this.$toast('按钮');

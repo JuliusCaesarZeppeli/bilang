@@ -32,7 +32,7 @@
       </div>
       <p class="text4">用户晒图</p>
       <p class="end-text">●恭喜您获得200元现金体验卷</p>
-      <img class="end-img" src="../assets/images/h5页面3/h5页面x3_04.png">
+      <img class="end-img" src="../assets/images/h5页面3/h5页面x3_04.png" @click="$router.push('/h5page4')">
     </div>
   </div>
 </template>
@@ -46,7 +46,7 @@
     },
     methods: {
         onClickLeft () {
-          this.$toast('返回')
+          this.$router.go(-1);
         },
         onClickRight () {
           this.$toast('按钮')

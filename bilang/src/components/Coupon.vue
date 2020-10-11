@@ -13,7 +13,7 @@
     
     <!-- main -->
     
-    <van-tabs v-model="active">
+    <van-tabs>
     <van-tab title="有效">
       <div class="quan_1">
         <div class="left">
@@ -103,7 +103,7 @@ export default {
   },
   methods: {
     onClickLeft() {
-      this.$toast('返回');
+      this.$router.go(-1);
     },
     onClickRight() {
       this.$toast('按钮');

@@ -20,7 +20,7 @@
       <p class="text3">0.0<span>cm</span></p>
       <img  class="pic" src="../assets/images/我的尺寸/ft_pic_2.png">
       <img  class="pic1" src="../assets/images/我的尺寸/ft_pic.png">
-      <p class="text4">下一步<img src="../assets/images/我的尺寸/icon.png"></p>
+      <p class="text4" @click="$router.push('/WaistCircumFerence')">下一步<img src="../assets/images/我的尺寸/icon.png"></p>
     </div>
   </div>
 </template>
@@ -34,7 +34,7 @@
     },
     methods: {
         onClickLeft () {
-          this.$toast('返回')
+          this.$router.go(-1);
         },
         onClickRight () {
           this.$toast('按钮')

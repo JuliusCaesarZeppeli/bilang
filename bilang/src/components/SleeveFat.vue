@@ -2,7 +2,7 @@
 <div id='body'>
   <!-- 导航 -->
   <div class="document_nav">
-    <p>
+    <p @click="back">
       <span>〈</span>
       <span>返回</span>
     </p>
@@ -46,7 +46,7 @@
       </van-picker>
       <!-- 导航 -->
       <div class='block_nav'>
-        <p>
+        <p @click="$router.push('/Cuff')">
           <span>添加袖肥</span>
           <span>(选填)</span>
         </p>
@@ -79,6 +79,9 @@ export default {
       this.show=!this.show;
     },stop(){
       this.show=!this.show; 
+    },
+    back(){
+      this.$router.go(-1);
     }
   }
 }

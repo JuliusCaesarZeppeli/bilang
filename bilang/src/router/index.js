@@ -35,7 +35,6 @@ import Measurementsneck from '@/components/Measurementsneck'
 import Measurementshipline from '@/components/Measurementshipline'
 import Measurementschest from '@/components/Measurementschest'
 import Measurementssleeve from '@/components/Measurementssleeve'
-<<<<<<< HEAD
 import Pages from '@/components/Pages'
 import Message from '@/components/Message'
 import Cart from '@/components/Cart'
@@ -46,7 +45,6 @@ import Fashione from '@/components/Fashione'
 import Evaluate from '@/components/Evaluate'
 import All from '@/components/All'
 import Fill from '@/components/Fill'
-=======
 import My_address from '@/components/My_address'
 import Add_address from '@/components/Add_address'
 import Register from '@/components/Register'
@@ -59,7 +57,6 @@ import Weight from '@/components/Weight'
 import Hipline from '@/components/Hipline'
 import Chest from '@/components/Chest'
 import Waistline from '@/components/Waistline'
->>>>>>> a3ef0b85b67d9961af6a627d66855930085fd947
 Vue.use(Router)
 
 export default new Router({
@@ -225,7 +222,6 @@ export default new Router({
             path: '/Measurementssleeve',
             name: 'Measurementssleeve',
             component: Measurementssleeve
-<<<<<<< HEAD
         },
         {
             path: '/Fill',
@@ -233,100 +229,109 @@ export default new Router({
             component: Fill
         },
         {
-            path:'/Message',
-            name:'Message',
-            component:Message
-          },
-          {
-            path:'/Cart',
-            name:'Cart',
-            component:Cart
-          },
-          {
-            path:'/Site',
-            name:'Site',
-            component:Site
-          },
-          {
-            path:'/Integral',
-            name:'Integral',
-            component:Integral
-          },
-          {
-            path:'/Exchange',
-            name:'Exchange',
-            component:Exchange
-          },
-          {
-            path:'/Fashione',
-            name:'Fashione',
-            component:Fashione
-          },
-          {
-            path:'/Evaluate',
-            name:'Evaluate',
-            component:Evaluate
-          },
-          {
-            path:'/All',
-            name:'All',
-            component:All
-          },
-          {
-              path: '/Order',
-              name: 'Order',
-              component: Order
-          }
-=======
-        }, {
+            path: '/Message',
+            name: 'Message',
+            component: Message
+        },
+        {
+            path: '/Cart',
+            name: 'Cart',
+            component: Cart
+        },
+        {
+            path: '/Site',
+            name: 'Site',
+            component: Site
+        },
+        {
+            path: '/Integral',
+            name: 'Integral',
+            component: Integral
+        },
+        {
+            path: '/Exchange',
+            name: 'Exchange',
+            component: Exchange
+        },
+        {
+            path: '/Fashione',
+            name: 'Fashione',
+            component: Fashione
+        },
+        {
+            path: '/Evaluate',
+            name: 'Evaluate',
+            component: Evaluate
+        },
+        {
+            path: '/All',
+            name: 'All',
+            component: All
+        },
+        {
+            path: '/Order',
+            name: 'Order',
+            component: Order
+        },
+        {
             path: '/My_address',
             name: 'My_address',
             component: My_address
-        }, {
+        },
+        {
             path: '/Add_address',
             name: 'Add_address',
             component: Add_address
-        }, {
+        },
+        {
             path: '/Register',
             name: 'Register',
             component: Register
-        }, {
+        },
+        {
             path: '/Endorsement',
             name: 'Endorsement',
             component: Endorsement
-        }, {
+        },
+        {
             path: '/Size_not_have',
             name: 'Size_not_have',
             component: Size_not_have
-        }, {
+        },
+        {
             path: '/Size_have',
             name: 'Size_have',
             component: Size_have
-        }, {
+        },
+        {
             path: '/Shoulder',
             name: 'Shoulder',
             component: Shoulder
-        }, {
+        },
+        {
             path: '/Stature',
             name: 'Stature',
             component: Stature
-        }, {
+        },
+        {
             path: '/Weight',
             name: 'Weight',
             component: Weight
-        }, {
+        },
+        {
             path: '/Hipline',
             name: 'Hipline',
             component: Hipline
-        }, {
+        },
+        {
             path: '/Chest',
             name: 'Chest',
             component: Chest
-        }, {
+        },
+        {
             path: '/Waistline',
             name: 'Waistline',
             component: Waistline
         }
->>>>>>> a3ef0b85b67d9961af6a627d66855930085fd947
     ]
 })

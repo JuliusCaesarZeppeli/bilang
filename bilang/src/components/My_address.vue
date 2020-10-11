@@ -29,7 +29,7 @@
         <div class="bottom">广东省佛山市禅城区印象购物中心5号楼b-101122 1902室</div>
       </div>
     </div>
-    <div class="btn">
+    <div class="btn" @click="$router.push({name:'Add_address'})">
       <button>添加新地址</button>
     </div>
   </div>
@@ -44,7 +44,7 @@ export default {
   },
   methods: {
   onClickLeft() {
-    this.$toast('返回');
+    this.$router.go(-1);
   },
   onClickRight() {
     this.$toast('按钮');

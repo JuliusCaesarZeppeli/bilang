@@ -84,7 +84,7 @@
 export default {
   methods: {
     onClickLeft() {
-      this.$toast('返回');
+      this.$router.go(-1);
     },
     onClickRight() {
       this.$toast('按钮');

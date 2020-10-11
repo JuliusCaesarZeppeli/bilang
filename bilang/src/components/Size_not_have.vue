@@ -17,43 +17,43 @@
     </div>
     <div class="body_">
       <!-- 身高 -->
-      <div>
+      <div @click="$router.push({name:'Stature'})">
         <img src="../assets/images/我的尺寸/pic_5.png">
         <p>身高</p>
         <p>--</p>
       </div>
       <!-- 体重 -->
-      <div>
+      <div @click="$router.push({name:'Weight'})">
         <img src="../assets/images/我的尺寸/pic_4.png">
         <p>体重</p>
         <p>--</p>
       </div>
       <!-- 肩宽 -->
-      <div>
+      <div @click="$router.push({name:'Shoulder'})">
         <img src="../assets/images/我的尺寸/pic_6.png">
         <p>肩宽</p>
         <p>--</p>
       </div>
       <!-- 胸围 -->
-      <div>
+      <div @click="$router.push({name:'Chest'})">
         <img src="../assets/images/我的尺寸/pic_2.png">
         <p>胸围</p>
         <p>--</p>
       </div>
       <!-- 腰围 -->
-      <div>
+      <div @click="$router.push({name:'Waistline'})">
         <img src="../assets/images/我的尺寸/pic_1.png">
         <p>腰围</p>
         <p>--</p>
       </div>
       <!-- 臀围 -->
-      <div>
+      <div @click="$router.push({name:'Hipline'})">
         <img src="../assets/images/我的尺寸/pic_3.png">
         <p>臀围</p>
         <p>--</p>
       </div>
     </div>
-    <div class="btn"><button>开始测量</button></div>
+    <div class="btn" @click="$router.push({name:'Measurementsnull'})"><button>开始测量</button></div>
   </div>
 </template>
 <script>
@@ -66,7 +66,7 @@ export default {
   },
   methods: {
   onClickLeft() {
-    this.$toast('返回');
+    this.$router.go(-1);
   },
   onClickRight() {
     this.$toast('按钮');

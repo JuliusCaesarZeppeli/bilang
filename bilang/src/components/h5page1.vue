@@ -26,7 +26,7 @@
         </van-divider>
       </div>
     </div>
-    <div class="end"><button>点击领取现金体验卷200元</button></div>
+    <div class="end" @click="$router.push('/h5page2')"><button>点击领取现金体验卷200元</button></div>
   </div>
 </template>
 
@@ -39,7 +39,7 @@
     },
     methods: {
         onClickLeft () {
-          this.$toast('返回')
+          this.$router.go(-1);
         },
         onClickRight () {
           this.$toast('按钮')

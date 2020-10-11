@@ -17,41 +17,41 @@
       </div>
       <div class="chunk1">
         <img src="../assets/images/测量尺寸/测量尺寸（无）_05.png">
-        <p>领围</p>
+        <p>胸围</p>
         <p class="gang">180<span>cm</span></p>
       </div>
       <div class="chunk1">
         <img src="../assets/images/测量尺寸/测量尺寸（无）_07.png">
-        <p>领围</p>
+        <p>腰围</p>
         <p class="gang">180<span>cm</span></p>
       </div>
     </div>
     <div class="chunk">
       <div class="chunk1">
         <img src="../assets/images/测量尺寸/测量尺寸（无）_12.png">
-        <p>领围</p>
+        <p>肩宽</p>
         <p class="gang">180<span>cm</span></p>
       </div>
       <div class="chunk1">
         <img src="../assets/images/测量尺寸/测量尺寸（无）_13.png">
-        <p>领围</p>
+        <p>袖长</p>
         <p class="gang">180<span>cm</span></p>
       </div>
       <div class="chunk1">
         <img src="../assets/images/测量尺寸/测量尺寸（无）_18.png">
-        <p>领围</p>
+        <p>衣长</p>
         <p class="gang">180<span>cm</span></p>
       </div>
     </div>
     <div class="chunk">
       <div class="chunk1">
         <img src="../assets/images/测量尺寸/测量尺寸（无）_23.png">
-        <p>领围</p>
+        <p>袖肥</p>
         <p class="gang">180<span>cm</span></p>
       </div>
       <div class="chunk1">
         <img src="../assets/images/测量尺寸/测量尺寸（无）_25.png">
-        <p>领围</p>
+        <p>袖口</p>
         <p class="gang">180<span>cm</span></p>
       </div>
       <div class="chunk1">
@@ -59,7 +59,7 @@
       </div>
     </div>
     <div class="enter">
-      <button>重新测量</button>
+      <button @click="$router.push('/Measurementsnull')">重新测量</button>
       <button>确定尺寸</button>
     </div>
   </div>
@@ -74,7 +74,7 @@
     },
     methods: {
         onClickLeft () {
-          this.$toast('返回')
+          this.$router.go(-1);
         },
         onClickRight () {
           this.$toast('按钮')

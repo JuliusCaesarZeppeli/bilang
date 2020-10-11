@@ -17,7 +17,7 @@
     <van-tabs v-model="active">
     <van-tab title="一级粉丝">
       <div class="fan">
-        <div class="fans_list">
+        <div class="fans_list" @click="$router.push('/ChalkOrder')">
           <div class="head_pic">
             <img src="../assets/images/我的粉丝&我的代言费/fans.png" />
           </div>
@@ -139,7 +139,7 @@ export default {
   },
   methods: {
     onClickLeft() {
-      this.$toast('返回');
+      this.$router.go(-1);
     },
     onClickRight() {
       this.$toast('按钮');

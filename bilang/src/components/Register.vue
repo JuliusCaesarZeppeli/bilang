@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="please_read"><img src="../assets/images/注册/iconfont.png"><span>请阅读</span><span>《注册须知》</span></div>
-    <div class="btn">
+    <div class="btn" @click="$router.push({name:'SignIn'})">
       <button >注册</button>
     </div>
   </div>
@@ -48,7 +48,7 @@ export default {
   },
   methods: {
   onClickLeft() {
-    this.$toast('返回');
+    this.$router.go(-1);
   },
   onClickRight() {
     this.$toast('按钮');

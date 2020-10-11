@@ -2,7 +2,7 @@
   <div id='body'>
     <!-- 导航 -->
     <div class="document_nav">
-      <p>
+      <p @click="back">
         <span>〈</span>
         <span>返回</span>
       </p>
@@ -10,20 +10,24 @@
       <p>● ● ●</p>
     </div>
     <!-- 内容图片 -->
-    <div class='images'>
+    <div class='images' @click="$router.push({name:'Fashion'})">
       <img src="../assets/images/潮流资讯/潮流_02.png" alt="">
     </div>
-    <div class='images'>
+    <div class='images' @click="$router.push({name:'Fashion'})">
       <img src="../assets/images/潮流资讯/潮流_04.png" alt="">
     </div>
-    <div class='images'>
+    <div class='images' @click="$router.push({name:'Fashion'})">
       <img src="../assets/images/潮流资讯/潮流_05_06.png" alt="">
     </div>
   </div>
 </template>
 <script>
 export default {
-  
+  methods:{
+    back(){
+      this.$router.go(-1);
+    }
+  }
 }
 </script>
 <style scoped>

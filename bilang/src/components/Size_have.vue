@@ -14,7 +14,7 @@
     <div class="banner">
       <img src="../assets/images/我的粉丝&我的代言费/fans.png">
       <span>董大伟</span>
-      <div class="remeasure"><img src="../assets/images/我的尺寸/icon_1.png"><p>重新测量</p></div>
+      <div class="remeasure" @click="$router.push({name:'Size_not_have'})"><img src="../assets/images/我的尺寸/icon_1.png"><p>重新测量</p></div>
     </div>
     <div class="body_">
       <!-- 身高 -->
@@ -70,7 +70,7 @@ export default {
   },
   methods: {
   onClickLeft() {
-    this.$toast('返回');
+    this.$router.go(-1);
   },
   onClickRight() {
     this.$toast('按钮');

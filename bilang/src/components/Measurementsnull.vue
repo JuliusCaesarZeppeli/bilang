@@ -10,55 +10,55 @@
       class="underpainting"
     />
     <div class="chunk">
-      <div class="chunk1">
+      <div class="chunk1" @click="$router.push('/Measurementsneck')">
         <img src="../assets/images/测量尺寸/测量尺寸（无）_03.png">
         <p>领围</p>
         <p class="gang">--</p>
       </div>
-      <div class="chunk1">
+      <div class="chunk1" @click="$router.push('/Measurementschest')">
         <img src="../assets/images/测量尺寸/测量尺寸（无）_05.png">
-        <p>领围</p>
+        <p>胸围</p>
         <p class="gang">--</p>
       </div>
-      <div class="chunk1">
+      <div class="chunk1" @click="$router.push('/WaistCircumFerence')">
         <img src="../assets/images/测量尺寸/测量尺寸（无）_07.png">
-        <p>领围</p>
+        <p>腰围</p>
         <p class="gang">--</p>
       </div>
     </div>
     <div class="chunk">
-      <div class="chunk1">
+      <div class="chunk1" @click="$router.push('/Measurementsshoulder')">
         <img src="../assets/images/测量尺寸/测量尺寸（无）_12.png">
-        <p>领围</p>
+        <p>肩宽</p>
         <p class="gang">--</p>
       </div>
-      <div class="chunk1">
+      <div class="chunk1" @click="$router.push('/SleeveLength')">
         <img src="../assets/images/测量尺寸/测量尺寸（无）_13.png">
-        <p>领围</p>
+        <p>袖长</p>
         <p class="gang">--</p>
       </div>
-      <div class="chunk1">
+      <div class="chunk1" @click="$router.push('/Length')">
         <img src="../assets/images/测量尺寸/测量尺寸（无）_18.png">
-        <p>领围</p>
+        <p>衣长</p>
         <p class="gang">--</p>
       </div>
     </div>
-    <div class="chunk">
-      <div class="chunk1">
+    <div class="chunk" >
+      <div class="chunk1" @click="$router.push('/Measurementssleeve')">
         <img src="../assets/images/测量尺寸/测量尺寸（无）_23.png">
-        <p>领围</p>
+        <p>袖肥</p>
         <p class="gang">--</p>
       </div>
-      <div class="chunk1">
+      <div class="chunk1" @click="$router.push('/Cuff')">
         <img src="../assets/images/测量尺寸/测量尺寸（无）_25.png">
-        <p>领围</p>
+        <p>袖口</p>
         <p class="gang">--</p>
       </div>
       <div class="chunk1">
         
       </div>
     </div>
-    <div class="enter"><button>开始测量</button></div>
+    <div class="enter" @click="$router.push('/Measurementsneck')"><button>开始测量</button></div>
   </div>
 </template>
 
@@ -71,7 +71,7 @@
     },
     methods: {
         onClickLeft () {
-          this.$toast('返回')
+          this.$router.go(-1);
         },
         onClickRight () {
           this.$toast('按钮')

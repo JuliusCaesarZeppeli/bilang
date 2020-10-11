@@ -35,19 +35,19 @@
     </div>
     
     <div class="main">
-      <div class="mainlist">
+      <div class="mainlist" @click="$router.push('/Fans')">
         <div class="icon">
           <img src="../assets/images/我的钱包/icon_1.png" />
         </div>
         <p class="wz">我的粉丝</p>
       </div>
-      <div class="mainlist">
+      <div class="mainlist" @click="$router.push('/Order')">
         <div class="icon">
           <img src="../assets/images/我的钱包/icon_2.png" />
         </div>
         <p class="wz">我的订单</p>
       </div>
-      <div class="mainlist">
+      <div class="mainlist" @click="$router.push('/Endorsement')">
         <div class="icon">
           <img src="../assets/images/我的钱包/icon_3.png" />
         </div>
@@ -55,19 +55,19 @@
       </div>
     </div>
     <div class="main">
-      <div class="mainlist">
+      <div class="mainlist" @click="$router.push('/Share')">
         <div class="icon">
           <img src="../assets/images/我的钱包/icon_4.png" />
         </div>
         <p class="wz">我的私享卡</p>
       </div>
-      <div class="mainlist">
+      <div class="mainlist" @click="$router.push('/Integral')">
         <div class="icon">
           <img src="../assets/images/我的钱包/icon_5.png" />
         </div>
         <p class="wz">我的积分</p>
       </div>
-      <div class="mainlist">
+      <div class="mainlist" @click="$router.push('/Coupon')">
         <div class="icon">
           <img src="../assets/images/我的钱包/icon_6.png" />
         </div>
@@ -75,19 +75,19 @@
       </div>
     </div>
     <div class="main">
-      <div class="mainlist">
+      <div class="mainlist" @click="$router.push('/Bill')">
         <div class="icon">
           <img src="../assets/images/我的钱包/icon_7.png" />
         </div>
         <p class="wz">账单查询</p>
       </div>
-      <div class="mainlist">
+      <div class="mainlist" @click="$router.push('/ChalkOrder')">
         <div class="icon">
           <img src="../assets/images/我的钱包/icon_8.png" />
         </div>
         <p class="wz">粉丝权益</p>
       </div>
-      <div class="mainlist">
+      <div class="mainlist" @click="$router.push('/h5page1')">
         <div class="icon">
           <img src="../assets/images/我的钱包/icon_9.png" />
         </div>
@@ -107,7 +107,7 @@ export default {
   },
   methods: {
     onClickLeft() {
-      this.$toast('返回');
+      this.$router.go(-1);
     },
     onClickRight() {
       this.$toast('按钮');

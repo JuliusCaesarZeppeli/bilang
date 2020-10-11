@@ -2,7 +2,7 @@
   <!-- 登陆界面 -->
   <div id="body">
     <div class="document_nav">
-      <p>
+      <p @click="back">
         <span>〈</span>
         <span>返回</span>
       </p>
@@ -30,12 +30,12 @@
       </div>
     </div>
     <div class='document_SignIn '>
-      <div class='accountNumber SignIn_button'>
+      <div class='accountNumber SignIn_button' @click="$router.push('/')">
         <p>登陆</p>
       </div>
     </div>
     <div class='document_SignIn '>
-      <div class='accountNumber SignIn_button registered_button'>
+      <div class='accountNumber SignIn_button registered_button' @click="$router.push('/Register')">
         <p>注册</p>
       </div>
     </div>
@@ -55,7 +55,12 @@
 </template>
 <script>
 export default {
-  name:'SignIn', 
+  name:'SignIn',
+  methods:{
+    back(){
+      this.$router.go(-1);
+    }
+  } 
 }
 </script>
 <style scoped>

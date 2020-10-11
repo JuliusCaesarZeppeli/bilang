@@ -16,14 +16,14 @@
     <van-tabs v-model="active" class="main_list">
       <van-tab title="全部">
         <!-- 待付款 -->
-        <div class="obligation" @click="hrefDetail">
+        <div class="obligation">
           <div class="obligation_one">
             <span class="order_num">订单号:</span>
             <span class="num">1000800245123569</span>
             <span class="state">待付款</span>
           </div>
           <hr>
-          <div class="goods">
+          <div class="goods" @click="hrefDetail">
             <div class="good_pic">
               <img src="../assets/images/我的订单/pic_1.png" />
             </div>
@@ -51,7 +51,7 @@
             <span class="state">待收货</span>
           </div>
           <hr>
-          <div class="goods">
+          <div class="goods" @click="hrefDetail">
             <div class="good_pic">
               <img src="../assets/images/我的订单/pic_1.png" />
             </div>
@@ -77,7 +77,7 @@
             <span class="state">待收货</span>
           </div>
           <hr>
-          <div class="goods">
+          <div class="goods" @click="hrefDetail">
             <div class="good_pic">
               <img src="../assets/images/我的订单/pic_1.png" />
             </div>
@@ -103,7 +103,7 @@
             <span class="state">待评价</span>
           </div>
           <hr>
-          <div class="goods">
+          <div class="goods" @click="hrefDetail">
             <div class="good_pic">
               <img src="../assets/images/我的订单/pic_1.png" />
             </div>
@@ -129,7 +129,7 @@
             <span class="state">待评价</span>
           </div>
           <hr>
-          <div class="goods">
+          <div class="goods" @click="hrefDetail">
             <div class="good_pic">
               <img src="../assets/images/我的订单/pic_1.png" />
             </div>
@@ -156,7 +156,7 @@
             <span class="state">待付款</span>
           </div>
           <hr>
-          <div class="goods">
+          <div class="goods" @click="hrefDetail">
             <div class="good_pic">
               <img src="../assets/images/我的订单/pic_1.png" />
             </div>
@@ -185,7 +185,7 @@
             <span class="state">待收货</span>
           </div>
           <hr>
-          <div class="goods">
+          <div class="goods" @click="hrefDetail">
             <div class="good_pic">
               <img src="../assets/images/我的订单/pic_1.png" />
             </div>
@@ -211,7 +211,7 @@
             <span class="state">待收货</span>
           </div>
           <hr>
-          <div class="goods">
+          <div class="goods" @click="hrefDetail">
             <div class="good_pic">
               <img src="../assets/images/我的订单/pic_1.png" />
             </div>
@@ -238,7 +238,7 @@
             <span class="state">待评价</span>
           </div>
           <hr>
-          <div class="goods">
+          <div class="goods" @click="hrefDetail">
             <div class="good_pic">
               <img src="../assets/images/我的订单/pic_1.png" />
             </div>
@@ -264,7 +264,7 @@
             <span class="state">待评价</span>
           </div>
           <hr>
-          <div class="goods">
+          <div class="goods" @click="hrefDetail">
             <div class="good_pic">
               <img src="../assets/images/我的订单/pic_1.png" />
             </div>
@@ -292,12 +292,12 @@ export default {
   name: 'Order',
   data () {
     return {
-      active: 2,
+      active: 0,
     }
   },
    methods: {
     onClickLeft() {
-      this.$toast('返回');
+      this.$router.go(-1);
     },
     onClickRight() {
       this.$toast('按钮');
@@ -358,7 +358,6 @@ hr{
   float:left;
   margin-top: 0.3rem;
   margin-left: 0.3rem;
-  background:#F00;
 }
 .good_pic>img{
   width:1.2rem;

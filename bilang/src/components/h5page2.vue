@@ -37,7 +37,7 @@
           <p>¥<span>300</span></p>
           <p>有效时间：2015-11-06至2015-11-17</p>
         </div>
-        <button>点击领取<img src="../assets/images/我的尺寸/icon.png"></button>
+        <button @click="$router.push('/h5page3')">点击领取<img src="../assets/images/我的尺寸/icon.png"></button>
       </div>
     </div>
   </div>
@@ -52,7 +52,7 @@
     },
     methods: {
         onClickLeft () {
-          this.$toast('返回')
+          this.$router.go(-1);
         },
         onClickRight () {
           this.$toast('按钮')

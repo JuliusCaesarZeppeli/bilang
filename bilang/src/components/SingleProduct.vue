@@ -2,7 +2,7 @@
 <!-- 单品图文信息 -->
   <div id='body'>
     <div class="document_nav">
-      <p>
+      <p @click="back">
         <span>〈</span>
         <span>返回</span>
       </p>
@@ -141,7 +141,11 @@
 </template>
 <script>
 export default {
-  
+  methods:{
+    back(){
+      this.$router.go(-1);
+    }
+  }
 }
 </script>
 <style scoped>

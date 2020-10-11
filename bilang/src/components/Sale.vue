@@ -64,7 +64,7 @@
           <span class="price1">￥199.00</span>
           <span class="price2">￥2000.00</span>
         </div>
-        <div class="main-right">
+        <div class="main-right" @click="$router.push('/Single')">
           <span class="main_right_wz">去抢购</span>
           <img src="../assets/images/我的订单/icon.png" />
         </div>
@@ -81,7 +81,7 @@
           <span class="price1">￥199.00</span>
           <span class="price2">￥2000.00</span>
         </div>
-        <div class="main-right">
+        <div class="main-right" @click="$router.push('/Single')">
           <span class="main_right_wz">去抢购</span>
           <img src="../assets/images/我的订单/icon.png" />
         </div>
@@ -98,7 +98,7 @@
           <span class="price1">￥199.00</span>
           <span class="price2">￥2000.00</span>
         </div>
-        <div class="main-right">
+        <div class="main-right" @click="$router.push('/Single')">
           <span class="main_right_wz">去抢购</span>
           <img src="../assets/images/我的订单/icon.png" />
         </div>
@@ -115,7 +115,7 @@
           <span class="price1">￥199.00</span>
           <span class="price2">￥2000.00</span>
         </div>
-        <div class="main-right">
+        <div class="main-right" @click="$router.push('/Single')">
           <span class="main_right_wz">去抢购</span>
           <img src="../assets/images/我的订单/icon.png" />
         </div>
@@ -133,7 +133,7 @@ export default {
   },
   methods: {
     onClickLeft() {
-      this.$toast('返回');
+      this.$router.go(-1);
     },
     onClickRight() {
       this.$toast('按钮');

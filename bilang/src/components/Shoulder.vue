@@ -20,7 +20,7 @@
       <div class="input_">
         <input type="text" value="0.0">
         <span>cm</span>
-        <div class="next_"><span>下一步</span><img src="../assets/images/我的尺寸/icon.png"></div>
+        <div class="next_" @click="$router.push({name:'Chest'})"><span>下一步</span><img src="../assets/images/我的尺寸/icon.png"></div>
       </div>
       <div class="scaleplate">
         <img src="../assets/images/我的尺寸/ft_pic.png">
@@ -38,7 +38,7 @@ export default {
   },
   methods: {
   onClickLeft() {
-    this.$toast('返回');
+    this.$router.go(-1);
   },
   onClickRight() {
     this.$toast('按钮');

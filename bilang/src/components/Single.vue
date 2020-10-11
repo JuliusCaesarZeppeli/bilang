@@ -2,7 +2,7 @@
   <div id = 'body'>
     <!-- 导航 -->
     <div class="document_nav">
-      <p>
+      <p @click="back">
         <span>〈</span>
         <span>返回</span>
       </p>
@@ -10,9 +10,9 @@
       <p>● ● ●</p>
     </div>
     <!-- 图片 -->
-    <div class='images'>
+    <div class='images' @click="$router.push('/SingleProduct')">
       <img src="../assets/images/单品/单品_02.png" alt="">
-      <img src="../assets/images/单品/单品_03.png" alt="">
+      <img src="../assets/images/单品/单品_03.png" alt="" @click.stop="$router.push('/Cart')">
     </div>
     <!-- 三道杠 -->
     <div class='ThreeBars'>
@@ -32,7 +32,11 @@
 </template>
 <script>
 export default {
-  
+  methods:{
+    back(){
+      this.$router.go(-1);
+    }
+  }
 }
 </script>
 <style scoped>

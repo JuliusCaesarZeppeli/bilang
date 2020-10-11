@@ -2,7 +2,7 @@
 <div id='body'>
   <!-- 导航 -->
   <div class="document_nav">
-    <p>
+    <p @click="back">
       <span>〈</span>
       <span>返回</span>
     </p>
@@ -34,7 +34,7 @@
     </p>
     <!-- 下一步箭头 -->
     <div class='die_right'>
-      <p>
+      <p @click="$router.push('/Measurements')">
         <span>下一步</span>
         <img src="../assets/images/限时特惠/icon.png" alt="">
       </p>
@@ -44,7 +44,11 @@
 </template>
 <script>
 export default {
-  
+  methods:{
+    back(){
+      this.$router.go(-1);
+    }
+  }
 }
 </script>
 <style scoped>

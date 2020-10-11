@@ -33,7 +33,7 @@
         <van-checkbox v-model="checkede" class="end">全选</van-checkbox>
         <p>合计：¥ 2000.00</p>
         <p>数量：1</p>
-        <div class="botton_right">
+        <div class="botton_right" @click="$router.push('/Fill')">
             <img src="../assets/images/购物车/icon.png">
             <p>去结算</p>
         </div>
@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     onClickLeft() {
-      this.$toast('返回');
+      this.$router.go(-1);
     },
     onClickRight() {
       this.$toast('按钮');

@@ -2,7 +2,7 @@
   <div class='body'>
     <!-- 导航  -->
     <div class="document_nav">
-      <p>
+      <p @click="back">
         <span>〈</span>
         <span>返回</span>
       </p>
@@ -107,6 +107,9 @@ export default {
   methods:{
     none(){
       this.remove=false;
+    },
+    back(){
+      this.$router.go(-1);
     }
   }
 }

@@ -48,7 +48,7 @@
           <div><van-switch v-model="checked" size="0.3rem" active-color="#234497" inactive-color="#C3C3C3"/></div>
       </div>
     </div>
-    <div class="btn">
+    <div class="btn" @click="hrefaddress">
       <button>保存</button>
     </div>
   </div>
@@ -63,11 +63,14 @@ export default {
   },
   methods: {
   onClickLeft() {
-    this.$toast('返回');
+    this.$router.go(-1);
   },
   onClickRight() {
     this.$toast('按钮');
   },
+  hrefaddress(){
+    this.$router.push({name:"My_address"})
+  }
   },
 }
 </script>

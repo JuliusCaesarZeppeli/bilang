@@ -29,7 +29,7 @@
 
     <!-- main -->
         <!-- main_one -->
-    <div class="main_one">
+    <div class="main_one" @click="$router.push({name:'Fashione'})">
       <div class="main_one_right">
         <div class="main_one_right_wz">
           <p class="one_wz1">时尚精选</p>
@@ -41,7 +41,7 @@
     </div>
 
         <!-- main_two -->
-    <div class="main_two">
+    <div class="main_two" @click="$router.push({name:'FashionInfo'})">
       <div class="main_two_right">
         <div class="main_two_right_wz">
           <p class="two_wz1">潮流资讯</p>
@@ -53,10 +53,10 @@
     </div>
 
             <!-- main_three -->
-    <div class="main_three">
+    <div class="main_three" @click="$router.push('/Sale')">
       <div class="main_three_right">
         <div class="main_three_right_wz">
-          <p class="three_wz1">潮流资讯</p>
+          <p class="three_wz1">限时特惠</p>
           <p class="three_wz2">Fashion Trend</p>
           <img src="../assets/images/首页/icon_01.png" />
         </div>
@@ -81,7 +81,7 @@
       <img src="../assets/images/首页/button.png"/>
     </div>
     <van-popup class="center" v-model="show" closeable position="left" :style="{ height: '100%',width:'5.8rem'}" >
-      <div class="photo">
+      <div class="photo" @click="$router.push('/SignIn')">
         <div class="touxiang">
           <div class="touxiang2"></div>
         </div>
@@ -93,31 +93,31 @@
           <img src="../assets/images/个人中心/icon_01.png">
           <span>首页</span>
         </li>
-        <li>
+        <li @click="$router.push({name:'Message'})">
           <img src="../assets/images/个人中心/icon_02.png">
           <span>我的信息</span>
         </li>
-        <li>
+        <li @click="$router.push({name:'Order'})">
           <img src="../assets/images/个人中心/icon_03.png">
           <span>我的订单</span>
         </li>
-        <li>
+        <li @click="$router.push({name:'Cart'})">
           <img src="../assets/images/个人中心/icon_04.png">
           <span>我的购物车</span>
         </li>
-        <li>
+        <li @click="$router.push({name:'Size_not_have'})">
           <img src="../assets/images/个人中心/icon_05.png">
           <span>我的尺寸</span>
         </li>
-        <li>
+        <li @click="$router.push({name:'Wallet'})">
           <img src="../assets/images/个人中心/icon_06.png">
           <span>我的钱包</span>
         </li>
-        <li>
+        <li @click="$router.push({name:'Collect'})">
           <img src="../assets/images/个人中心/icon_07.png">
           <span>我的收藏</span>
         </li>
-        <li>
+        <li @click="$router.push({name:'My_address'})">
           <img src="../assets/images/个人中心/icon_08.png">
           <span>我的地址</span>
         </li>
@@ -143,7 +143,7 @@ export default {
   },
   methods: {
     onClickLeft () {
-      this.$toast('返回')
+      this.$router.go(-1);
     },
     onClickRight () {
       this.$toast('按钮')

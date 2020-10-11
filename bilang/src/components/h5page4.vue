@@ -32,7 +32,7 @@
           <img class="zuo" src="../assets/images/h5页面2/h5页面2_03.png">
         </div>
         <p class="text4">用户晒图</p>
-        <div class="layout3">
+        <div class="layout3" @click="$router.push('/h5page6')">
           <p>点击领取<br/>
           <span>价值200元体验卷</span></p>
           <img class="end-img" src="../assets/images/h5页面4/h5页面x4_03.png">
@@ -52,7 +52,7 @@
     },
     methods: {
         onClickLeft () {
-          this.$toast('返回')
+          this.$router.go(-1);
         },
         onClickRight () {
           this.$toast('按钮')

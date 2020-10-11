@@ -38,7 +38,7 @@ export default {
   name:'Message',
   methods: {
     onClickLeft() {
-      this.$Toast('返回');
+      this.$router.go(-1);
     },
     onClickRight() {
       this.$Toast('按钮');
