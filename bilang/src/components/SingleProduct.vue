@@ -147,16 +147,15 @@
 </template>
 <script>
 export default {
-<<<<<<< HEAD
+   name:'SingleProduct',
   methods:{
     back(){
       this.$router.go(-1);
-=======
-  name:'SingleProduct',
+    }
+  },
   data(){
     return{
       value:0,
->>>>>>> 994ca66c822e07faeedbeac7e53eab02a7b67e60
     }
   }
 }

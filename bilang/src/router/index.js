@@ -57,10 +57,7 @@ import Weight from '@/components/Weight'
 import Hipline from '@/components/Hipline'
 import Chest from '@/components/Chest'
 import Waistline from '@/components/Waistline'
-<<<<<<< HEAD
-=======
 
->>>>>>> 994ca66c822e07faeedbeac7e53eab02a7b67e60
 Vue.use(Router)
 
 export default new Router({
@@ -233,7 +230,6 @@ export default new Router({
             component: Fill
         },
         {
-<<<<<<< HEAD
             path: '/Message',
             name: 'Message',
             component: Message
@@ -278,54 +274,9 @@ export default new Router({
             name: 'Order',
             component: Order
         },
+
         {
-=======
-            path:'/Message',
-            name:'Message',
-            component:Message
-          },
-          {
-            path:'/Cart',
-            name:'Cart',
-            component:Cart
-          },
-          {
-            path:'/Site',
-            name:'Site',
-            component:Site
-          },
-          {
-            path:'/Integral',
-            name:'Integral',
-            component:Integral
-          },
-          {
-            path:'/Exchange',
-            name:'Exchange',
-            component:Exchange
-          },
-          {
-            path:'/Fashione',
-            name:'Fashione',
-            component:Fashione
-          },
-          {
-            path:'/Evaluate',
-            name:'Evaluate',
-            component:Evaluate
-          },
-          {
-            path:'/All',
-            name:'All',
-            component:All
-          },
-          {
-              path: '/Order',
-              name: 'Order',
-              component: Order
-          },
-         {
->>>>>>> 994ca66c822e07faeedbeac7e53eab02a7b67e60
+
             path: '/My_address',
             name: 'My_address',
             component: My_address
