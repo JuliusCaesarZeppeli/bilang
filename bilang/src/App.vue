@@ -15,6 +15,9 @@ export default {
   margin: 0;
   padding: 0;
 }
+.van-nav-bar{
+  background:#000;
+}
 .van-nav-bar__text {
     color: #fff;
 }
@@ -63,6 +66,9 @@ element.style {
 body{
   background: #f3f4f6;
 }
+.van-nav-bar{
+  background:#000;
+}
 .van-swipe__indicators {
     position: absolute;
     bottom: 0.7rem;
@@ -78,5 +84,60 @@ body{
     font-size: 14px;
     line-height: 20px;
     display: inline-block;
+}
+
+/* 张博 */
+.van-ellipsis{
+  color:#fff;
+}
+.van-radio__icon--round .van-icon {
+    border-radius: 100%;
+    display:none;
+}
+.van-icon::before {
+    display: inline-block;
+}
+.van-swipe-item{
+  height:3.5rem;
+}
+.van-icon{
+  display:inline-block;
+}
+.van-address-list__bottom{
+  top:41%;
+}
+.van-button--danger {
+    color: #fff;
+    background-color:#244497;
+    border: 1px solid #244497;
+}
+.van-address-list__add {
+    height: 1rem;
+    margin: 5px 0;
+    border-radius: 0;
+}
+.van-col--6{
+  font-size:0.4rem;
+}
+.van-row--flex{
+  width:100%;
+  height:1.5rem;
+  background:#fff;
+  box-sizing: border-box;
+  padding-top: 0.3rem;
+}
+.van-checkbox__label {
+    margin-left: 21px;
+    color: #323233;
+    line-height: 20px;
+    display: inline-block;
+    font-size: 0.7rem;
+}
+.van-checkbox__label {
+    margin-left: 21px;
+    color: #323233;
+    line-height: 20px;
+    display: inline-block;
+    font-size: 0.5rem;
 }
 </style>
