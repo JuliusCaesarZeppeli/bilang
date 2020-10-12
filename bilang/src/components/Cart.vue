@@ -18,26 +18,12 @@
         <img class="del" src="../assets/images/购物车/del.png" @click="del(index)">
       </div>
     </div>
-<<<<<<< HEAD
     <!-- 下面提交 -->
-=======
-<<<<<<< HEAD
-    <!-- 下面提交 -->
-=======
 
->>>>>>> e0b694c1474ddaeadfd224971b40176e376b8c19
->>>>>>> 8eb3e47e549059b630d28f209d3f3f0430fe0943
     <div class="botton">
         <van-checkbox v-model="checkede" class="end" @click="check_all">全选</van-checkbox>
         <p>合计：￥{{sum}}</p>
         <p>数量：{{total}}</p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> e0b694c1474ddaeadfd224971b40176e376b8c19
->>>>>>> 8eb3e47e549059b630d28f209d3f3f0430fe0943
         <div class="botton_right" @click="$router.push('/Fill')">
             <img src="../assets/images/购物车/icon.png" >
             <p>去结算</p>
@@ -48,34 +34,15 @@
 <script>
 export default {
   name:'Cart',
-<<<<<<< HEAD
-      data(){
-    return {
-      Arr : [{id : 1,price : 1000,checked : false,value:1,subtotal:1000},
-             {id : 2,price : 2000,checked : false,value:1,subtotal:2000},
-=======
     data(){
     return {
       Arr : [{id : 1,price : 1000,checked : false,value:1,subtotal:1000},
              {id : 2,price : 2000,checked : false,value:1,subtotal:2000},
-<<<<<<< HEAD
->>>>>>> 8eb3e47e549059b630d28f209d3f3f0430fe0943
-
             ],
       checkede:false,
       values:1,
       sum : 2000,
       total : 1,
-<<<<<<< HEAD
-=======
-=======
-            ],
-      checkede:false,
-      values:1,
-      sum : 0,
-      total : 0,
->>>>>>> e0b694c1474ddaeadfd224971b40176e376b8c19
->>>>>>> 8eb3e47e549059b630d28f209d3f3f0430fe0943
     };
   },
   methods: {
@@ -141,15 +108,9 @@ export default {
           this.sum += data.subtotal;
         }
       })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     },
     xiaojie(){
       
->>>>>>> e0b694c1474ddaeadfd224971b40176e376b8c19
->>>>>>> 8eb3e47e549059b630d28f209d3f3f0430fe0943
     }
   },
 }
