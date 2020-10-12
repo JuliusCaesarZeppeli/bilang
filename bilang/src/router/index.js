@@ -57,6 +57,8 @@ import Weight from '@/components/Weight'
 import Hipline from '@/components/Hipline'
 import Chest from '@/components/Chest'
 import Waistline from '@/components/Waistline'
+import Reset_address from '@/components/Reset_address'
+
 
 Vue.use(Router)
 
@@ -335,6 +337,11 @@ export default new Router({
             path: '/Waistline',
             name: 'Waistline',
             component: Waistline
+        },
+        {
+            path: '/Reset_address',
+            nameL: 'Reset_address',
+            component: Reset_address
         }
     ]
 })
