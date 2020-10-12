@@ -9,8 +9,15 @@
       <p>悠闲型男灰色衬衫</p>
       <p>● ● ●</p>
     </div>
+    <!-- 顶部轮播 -->
     <div class='document_Carousel'>
-      <img src="../assets/images/首页/index_04.png">
+      <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
+        <van-swipe-item><img src="../assets/images/单品/单品_02.png"></van-swipe-item>
+        <van-swipe-item><img src="../assets/images/时尚精选/pic_01.png"></van-swipe-item>
+        <van-swipe-item><img src="../assets/images/时尚精选/pic_02.png"></van-swipe-item>
+        <van-swipe-item><img src="../assets/images/时尚精选/pic_04.png"></van-swipe-item>
+      </van-swipe>
+      
     </div>
     <div class='Evaluation'>
       <p>
@@ -39,29 +46,26 @@
           color='blue'
           void-icon="star"
           void-color=""
-          name='1'
         />
       </P>
       <P>
         <span>服务态度</span>
         <van-rate
-          v-model="value"
+          v-model="value2"
           :size="5"
           color='blue'
           void-icon="star"
           void-color=""
-          name='2'
         />
       </P>
       <P>
         <span>尺寸合适</span>
         <van-rate
-          v-model="value"
+          v-model="value3"
           :size="5"
           color='blue'
           void-icon="star"
           void-color=""
-          name='3'
         />
       </P>
     </div>
@@ -76,34 +80,31 @@
       <P>
         <span>产品质量</span>
         <van-rate
-          v-model="value"
+          v-model="value4"
           :size="5"
           color='blue'
           void-icon="star"
           void-color=""
-          name='4'
         />
       </P>
       <P>
         <span>服务态度</span>
         <van-rate
-          v-model="value"
+          v-model="value5"
           :size="5"
           color='blue'
           void-icon="star"
           void-color=""
-          name='5'
         />
       </P>
       <P>
         <span>尺寸合适</span>
         <van-rate
-          v-model="value"
+          v-model="value6"
           :size="5"
           color='blue'
           void-icon="star"
           void-color=""
-          name='6'
         />
       </P>
     </div>
@@ -136,11 +137,16 @@
       <p>¥ 899.00</p>
     </div>
     <!-- 购物车 -->
+<<<<<<< HEAD
     <div class='shoppingCart'>
       <img src="../assets/images/单品/单品_03.png" @click="$router.push('/Cart')">
+=======
+    <div class='shoppingCart' @click="$router.push('/Cart')">
+      <img src="../assets/images/单品/单品_03.png">
+>>>>>>> 3a21f3f8247bd35376c38956332f9a2f30e46a49
     </div>
     <!-- 三道杠 -->
-    <div class='ThreeBars'>
+    <div class='ThreeBars' >
       <img src="../assets/images/首页/button.png">
     </div>
   </div>
@@ -156,6 +162,11 @@ export default {
   data(){
     return{
       value:0,
+      value6:0,
+      value2:0,
+      value3:0,
+      value4:0,
+      value5:0,
     }
   }
 }
@@ -193,6 +204,15 @@ img{width:100%;height:100%;}
 .content_die_bottom>p{margin:.15rem 0;}
 .content_die_bottom>p:nth-of-type(2){font-size:.24rem;}
 .content_die_bottom>p:nth-of-type(3){font-size:.34rem;color:#FF4141;font-weight:bolder;}
-.shoppingCart{width:1.2rem;height:1.2rem;position:absolute;right:.48rem;bottom:1.5rem;}
+.shoppingCart{width:1.2rem;height:1.2rem;position:fixed;right:.48rem;bottom:1.8rem;}
 .ThreeBars{width:1.2rem;height:1.2rem;position:fixed;top:1.3rem;left:0;}
+ .my-swipe .van-swipe-item {
+    color: #fff;
+    height:8rem;
+    font-size: 20px;
+    line-height: 150px;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom:.3rem;
+  }
 </style>
