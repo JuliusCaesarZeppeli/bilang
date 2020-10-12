@@ -137,7 +137,7 @@
     </div>
     <!-- 购物车 -->
     <div class='shoppingCart'>
-      <img src="../assets/images/单品/单品_03.png">
+      <img src="../assets/images/单品/单品_03.png" @click="$router.push('/Cart')">
     </div>
     <!-- 三道杠 -->
     <div class='ThreeBars'>

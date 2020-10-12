@@ -13,20 +13,20 @@
     />
     
     <!-- main -->
-    <div class="MyCollect">
+    <div class="MyCollect" v-for="(item,index) in data" :key='item.id'>
       <div class="pic">
         <img src="../assets/images/我的收藏/pic_1.png" />
       </div>
       <p class="collect_wz">春秋商务休闲加肥加大胖子衬衣肥佬宽松中年正装长</p>
       <p class="collect_wz2">
-        <span class="rmb">¥</span><span class="price">2000</span>
-        <img src="../assets/images/我的收藏/我的收藏_06.png" />
+        <span class="rmb">¥</span><span class="price">{{item.price}}</span>
+        <img src="../assets/images/我的收藏/我的收藏_06.png"  @click="del(index)"/>
       </p>
     </div>
     
     <hr>
     
-    <div class="MyCollect">
+    <!-- <div class="MyCollect">
       <div class="pic">
         <img src="../assets/images/我的收藏/pic_1.png" />
       </div>
@@ -35,7 +35,7 @@
         <span class="rmb">¥</span><span class="price">2000</span>
         <img src="../assets/images/我的收藏/我的收藏_06.png" />
       </p>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -44,7 +44,19 @@ export default {
   name: 'Collect',
   data (){
     return {
-      
+      data:[{
+        id:1,
+        price:2000
+      },
+      {
+        id:2,
+        price:1000
+      },
+      {
+        id:3,
+        price:3000
+      }
+      ]
     }
   },
   methods: {
@@ -54,6 +66,10 @@ export default {
     onClickRight() {
       this.$toast('按钮');
     },
+    del(i){
+      this.data.splice(i,1);
+      console.log(i+1);
+    }
   },
 }
 </script>
