@@ -1,21 +1,21 @@
 <template>
   <div>
       <van-nav-bar class="nav"
-  title="购物车"
-  left-text="返回"
-  right-text="●●●"
-  left-arrow
-  @click-left="onClickLeft"
-  @click-right="onClickRight"
-/>
+        title="购物车"
+        left-text="返回"
+        right-text="●●●"
+        left-arrow
+        @click-left="onClickLeft"
+        @click-right="onClickRight"
+      />
   <div class="first_clothes">
     <van-checkbox v-model="checked" class="checkbox"></van-checkbox>
-      <div class="background_pic"><img src="../assets/images/结算/pic_1.png"></div>
+    <div class="background_pic"><img src="../assets/images/结算/pic_1.png"></div>
       <div class="pic_right">
         <p class="word_one">春秋商务休闲加肥加大胖子衬衣肥佬宽松中年正装长</p>
         <p class="word_two">￥<span class="word_three">2000.00</span></p> 
         <van-stepper v-model="value"/>   
-        <img class="del" src="../assets/images/购物车/del.png" >
+        <img class="del" src="../assets/images/购物车/del.png">
       </div>
     </div>
 
@@ -29,6 +29,7 @@
         <img class="del" src="../assets/images/购物车/del.png" >
       </div>
     </div>
+
     <div class="botton">
         <van-checkbox v-model="checkede" class="end">全选</van-checkbox>
         <p>合计：¥ 2000.00</p>
@@ -43,14 +44,14 @@
 <script>
 export default {
   name:'Cart',
-      data(){
-    return {
-      checked: true,
-      checkeds:true,
-      checkede:true,
-      value: 1,
-      values:1,
-    };
+    data(){
+      return {
+        checked: false,
+        checkeds:false,
+        checkede:false,
+        value:1,
+        values:1,
+      };
   },
   methods: {
     onClickLeft() {
@@ -62,6 +63,15 @@ export default {
   },
 }
 </script>
+
+
+
+
+
+
+
+
+
 <style>
 body{
   background:#f3f4f6;
@@ -78,7 +88,7 @@ body{
   padding-top: 0.8rem;
   margin-left: 0.4rem;
   display: inline-block;
-  float: left;
+  float:left;
 }
 .background_pic{
   width: 1.5rem;
