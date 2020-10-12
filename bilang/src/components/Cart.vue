@@ -8,31 +8,21 @@
   @click-left="onClickLeft"
   @click-right="onClickRight"
 />
-  <div class="first_clothes">
-    <van-checkbox v-model="checked" class="checkbox"></van-checkbox>
+  <div class="first_clothes" v-for="(item,index) in Arr" :key="item.id">
+    <van-checkbox v-model="item.checked" class="checkbox" @click="radio"></van-checkbox>
       <div class="background_pic"><img src="../assets/images/结算/pic_1.png"></div>
       <div class="pic_right">
         <p class="word_one">春秋商务休闲加肥加大胖子衬衣肥佬宽松中年正装长</p>
-        <p class="word_two">￥<span class="word_three">2000.00</span></p> 
-        <van-stepper v-model="value"/>   
-        <img class="del" src="../assets/images/购物车/del.png" >
+        <p class="word_two">￥<span class="word_three">{{item.price}}</span></p> 
+        <van-stepper v-model="item.value" @change="changeValue"/>   
+        <img class="del" src="../assets/images/购物车/del.png" @click="del(index)">
       </div>
     </div>
-
-    <div class="first_clothes">
-    <van-checkbox v-model="checkeds" class="checkbox"></van-checkbox>
-      <div class="background_pic"><img src="../assets/images/结算/pic_1.png"></div>
-      <div class="pic_right">
-        <p class="word_one">春秋商务休闲加肥加大胖子衬衣肥佬宽松中年正装长</p>
-        <p class="word_two">￥<span class="word_three">2000.00</span></p> 
-        <van-stepper v-model="values"/>   
-        <img class="del" src="../assets/images/购物车/del.png" >
-      </div>
-    </div>
+    <!-- 下面提交 -->
     <div class="botton">
-        <van-checkbox v-model="checkede" class="end">全选</van-checkbox>
-        <p>合计：¥ 2000.00</p>
-        <p>数量：1</p>
+        <van-checkbox v-model="checkede" class="end" @click="check_all">全选</van-checkbox>
+        <p>合计：￥{{sum}}</p>
+        <p>数量：{{total}}</p>
         <div class="botton_right" @click="$router.push('/Fill')">
             <img src="../assets/images/购物车/icon.png">
             <p>去结算</p>
@@ -45,11 +35,14 @@ export default {
   name:'Cart',
       data(){
     return {
-      checked: true,
-      checkeds:true,
-      checkede:true,
-      value: 1,
+      Arr : [{id : 1,price : 1000,checked : false,value:1,subtotal:1000},
+             {id : 2,price : 2000,checked : false,value:1,subtotal:2000},
+
+            ],
+      checkede:false,
       values:1,
+      sum : 2000,
+      total : 1,
     };
   },
   methods: {
@@ -59,6 +52,63 @@ export default {
     onClickRight() {
       this.$toast('按钮');
     },
+    // 单选
+    radio(){
+      this.checkede = true;
+      this.total = 0;
+      this.sum = 0;
+      this.Arr.forEach(data => {
+        if(data.checked == false){
+          this.checkede =  false;
+        }else{
+          this.total += data.value;
+          this.sum += data.subtotal;
+        }
+        
+      })
+    },
+    // 全选
+    check_all(){
+      this.total = 0;
+      this.sum = 0;
+       this.Arr.forEach(data => {
+         data.checked = this.checkede;
+         if(this.checkede){
+           this.total += data.value;
+           this.sum += data.subtotal;
+         }
+       })
+    },
+    // 删除
+    del(i){
+      this.Arr.splice(i,1);
+      this.total = 0;
+      this.sum = 0;
+      this.Arr.forEach(data => {
+        if(data.checked){
+          this.total += data.value;
+          this.sum += data.subtotal;
+        }
+      })
+      if(this.Arr.length == 0){
+        this.checkede = false;
+      }
+    },
+    // 加减值
+    changeValue(){
+      this.total = 0
+      this.sum = 0
+      this.Arr.forEach(data => {
+        if(data.value <= 0){
+          data.value = 1;
+        }
+        data.subtotal = data.value * data.price;
+        if(data.checked){
+          this.total += data.value;
+          this.sum += data.subtotal;
+        }
+      })
+    }
   },
 }
 </script>
@@ -92,7 +142,7 @@ body{
   height:1.5rem;
 }
 .pic_right{
-  width:4 rem;
+  width:4rem;
   height:1.5rem;
   display: inline-block;
   box-sizing: border-box;
