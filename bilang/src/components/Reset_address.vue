@@ -3,7 +3,7 @@
   <div class="bg">
     <!-- 标题 -->
     <van-nav-bar
-      title="添加收货地址"
+      title="修改收货地址"
       left-text="返回"
       right-text="●●●"
       left-arrow
@@ -13,18 +13,18 @@
     <div class="consignee">
       <div class="rows_">
         <div>收货人姓名:</div>
-        <div class="input_"><input type="text" value=""></div>
+        <div class="input_"><input type="text" value="张小明"></div>
       </div>
       <div class="rows">
         <div>手机号码:</div>
-        <div class="input_"><input type="text" value=""></div>
+        <div class="input_"><input type="text" value="16987542586"></div>
       </div>
     </div>
     <div class="dashed"><img src="../assets/images/添加收货地址/jiandao.png"></div>
     <div class="address">
       <div class="rows_">
         <div>邮政编码:</div>
-        <div class="input_"><input type="text" value=""></div>
+        <div class="input_"><input type="text" value="528031"></div>
       </div>
       <div class="rows_">
         <div>省份</div>
@@ -55,7 +55,7 @@
 </template>
 <script>
 export default {
-  name:"Add_address",
+  name:"Reset_address",
   data(){
     return {
       checked: false,
