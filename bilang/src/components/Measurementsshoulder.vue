@@ -17,7 +17,7 @@
 但不要勒紧。在呼气状态下读取测量值，精确到0.1cm</p>
     <div class="end">
       <p class="text2">添加肩宽</p>
-      <p class="text3">0.0<span>cm</span></p>
+      <p class="text3"><input type="text" value="0.0"><span>cm</span></p>
       <img  class="pic" src="../assets/images/我的尺寸/ft_pic_2.png">
       <img  class="pic1" src="../assets/images/我的尺寸/ft_pic.png">
       <p class="text4" @click="$router.push('/SleeveLength')">下一步<img src="../assets/images/我的尺寸/icon.png"></p>
@@ -88,6 +88,14 @@
 }
 .text3 span{
   font-size: 0.2rem;
+}
+.text3 input{
+  border: none;
+  background: none;
+  width: 1rem;
+  height:0.5rem;
+  font-size: 0.6rem;
+  font-weight: 900;
 }
 .end{
   margin-top: 0.6rem;

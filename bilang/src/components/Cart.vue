@@ -18,13 +18,21 @@
         <img class="del" src="../assets/images/购物车/del.png" @click="del(index)">
       </div>
     </div>
+<<<<<<< HEAD
     <!-- 下面提交 -->
+=======
+
+>>>>>>> e0b694c1474ddaeadfd224971b40176e376b8c19
     <div class="botton">
         <van-checkbox v-model="checkede" class="end" @click="check_all">全选</van-checkbox>
         <p>合计：￥{{sum}}</p>
         <p>数量：{{total}}</p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> e0b694c1474ddaeadfd224971b40176e376b8c19
         <div class="botton_right" @click="$router.push('/Fill')">
-            <img src="../assets/images/购物车/icon.png">
+            <img src="../assets/images/购物车/icon.png" >
             <p>去结算</p>
         </div>
     </div>
@@ -33,16 +41,24 @@
 <script>
 export default {
   name:'Cart',
-      data(){
+    data(){
     return {
       Arr : [{id : 1,price : 1000,checked : false,value:1,subtotal:1000},
              {id : 2,price : 2000,checked : false,value:1,subtotal:2000},
+<<<<<<< HEAD
 
             ],
       checkede:false,
       values:1,
       sum : 2000,
       total : 1,
+=======
+            ],
+      checkede:false,
+      values:1,
+      sum : 0,
+      total : 0,
+>>>>>>> e0b694c1474ddaeadfd224971b40176e376b8c19
     };
   },
   methods: {
@@ -108,10 +124,25 @@ export default {
           this.sum += data.subtotal;
         }
       })
+<<<<<<< HEAD
+=======
+    },
+    xiaojie(){
+      
+>>>>>>> e0b694c1474ddaeadfd224971b40176e376b8c19
     }
   },
 }
 </script>
+
+
+
+
+
+
+
+
+
 <style>
 body{
   background:#f3f4f6;
@@ -128,7 +159,7 @@ body{
   padding-top: 0.8rem;
   margin-left: 0.4rem;
   display: inline-block;
-  float: left;
+  float:left;
 }
 .background_pic{
   width: 1.5rem;
