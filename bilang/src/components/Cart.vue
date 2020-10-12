@@ -8,19 +8,19 @@
   @click-left="onClickLeft"
   @click-right="onClickRight"
 />
-  <div class="first_clothes">
-    <van-checkbox v-model="checked" class="checkbox"></van-checkbox>
+  <div class="first_clothes" v-for="(item,index) in cartsList" :key="item.id" >
+    <van-checkbox v-model="item.checked" class="checkbox" @click="dx"></van-checkbox>
       <div class="background_pic"><img src="../assets/images/结算/pic_1.png"></div>
       <div class="pic_right">
         <p class="word_one">春秋商务休闲加肥加大胖子衬衣肥佬宽松中年正装长</p>
-        <p class="word_two">￥<span class="word_three">2000.00</span></p> 
-        <van-stepper v-model="value"/>   
-        <img class="del" src="../assets/images/购物车/del.png" >
+        <p class="word_two">￥<span class="word_three"> {{item.price}}</span></p> 
+        <van-stepper v-model="item.value" @change="sr"/>   
+        <img class="del" src="../assets/images/购物车/del.png" @click="del(index)">
       </div>
     </div>
 
-    <div class="first_clothes">
-    <van-checkbox v-model="checkeds" class="checkbox"></van-checkbox>
+    <!-- <div class="first_clothes">
+    <van-checkbox v-model="item.checked" class="checkbox"></van-checkbox>
       <div class="background_pic"><img src="../assets/images/结算/pic_1.png"></div>
       <div class="pic_right">
         <p class="word_one">春秋商务休闲加肥加大胖子衬衣肥佬宽松中年正装长</p>
@@ -28,13 +28,13 @@
         <van-stepper v-model="values"/>   
         <img class="del" src="../assets/images/购物车/del.png" >
       </div>
-    </div>
+    </div> -->
     <div class="botton">
-        <van-checkbox v-model="checkede" class="end">全选</van-checkbox>
-        <p>合计：¥ 2000.00</p>
-        <p>数量：1</p>
+        <van-checkbox v-model="checkede" class="end" @click="check">全选</van-checkbox>
+        <p>合计：¥ <span>{{sum}}</span></p>
+        <p>数量：<span>{{total}}</span></p>
         <div class="botton_right" @click="$router.push('/Fill')">
-            <img src="../assets/images/购物车/icon.png">
+            <img src="../assets/images/购物车/icon.png" >
             <p>去结算</p>
         </div>
     </div>
@@ -43,13 +43,12 @@
 <script>
 export default {
   name:'Cart',
-      data(){
+    data(){
     return {
-      checked: true,
-      checkeds:true,
-      checkede:true,
-      value: 1,
-      values:1,
+      checkede:false,
+      cartsList:[{id:1,price:2000,checked:false,value:1,subtotal:2000},{id:2,price:2000,checked:false,value:1,subtotal:2000}],
+      sum:0,
+      total:0,
     };
   },
   methods: {
@@ -59,7 +58,59 @@ export default {
     onClickRight() {
       this.$toast('按钮');
     },
-  },
+    check(){
+      this.total = 0;
+      this.sum = 0;
+      this.cartsList.forEach(element => {
+        element.checked = this.checkede;
+        if(this.checkede){
+          this.total += element.value;
+          this.sum += element.subtotal;
+        }
+      });
+    },
+    dx(){
+      this.checkede = true;
+      this.total = 0;
+      this.sum = 0;
+      this.cartsList.forEach(element =>{
+        if(element.checked  == false){
+          this.checkede = false;
+        }else{
+          this.total += element.value;
+          this.sum += element.subtotal;
+        }
+      })
+    },
+    sr(){ 
+      this.total = 0
+      this.sum = 0
+      this.cartsList.forEach(element =>{
+        if(element.value <= 0){
+          element.value = 1;
+        }
+        element.subtotal = element.value * element.price;
+        if(element.checked){
+          this.total += element.value;
+          this.sum += element.subtotal;
+        }
+      })
+    },
+    del(i){
+      this.cartsList.splice(i,1);
+      this.total = 0;
+      this.sum = 0;
+      this.cartsList.forEach(element => {
+        if(this.checkede){
+          this.total += element.value;
+          this.sum += element.subtotal;
+        }
+      });
+      if(this.cartsList.length == 0){
+        this.checkede = false;
+      }
+    }
+  }
 }
 </script>
 <style>
