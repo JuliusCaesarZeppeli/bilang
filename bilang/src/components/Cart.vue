@@ -18,7 +18,19 @@
         <img class="del" src="../assets/images/购物车/del.png" @click="del(index)">
       </div>
     </div>
-    <!-- 下面提交 -->
+
+    <div class="first_clothes">
+    <van-checkbox v-model="checkeds" class="checkbox"></van-checkbox>
+      <div class="background_pic"><img src="../assets/images/结算/pic_1.png"></div>
+      <div class="pic_right">
+        <p class="word_one">春秋商务休闲加肥加大胖子衬衣肥佬宽松中年正装长</p>
+        <p class="word_two">￥<span class="word_three">2000.00</span></p> 
+        <van-stepper v-model="values"/>   
+        <img class="del" src="../assets/images/购物车/del.png" >
+      </div>
+    </div>
+
+>>>>>>> 2bc1c2f69aad0a0f91299fd9381ae55d53e02cac
     <div class="botton">
         <van-checkbox v-model="checkede" class="end" @click="check_all">全选</van-checkbox>
         <p>合计：￥{{sum}}</p>
@@ -114,6 +126,15 @@ export default {
   },
 }
 </script>
+
+
+
+
+
+
+
+
+
 <style>
 body{
   background:#f3f4f6;
@@ -130,7 +151,7 @@ body{
   padding-top: 0.8rem;
   margin-left: 0.4rem;
   display: inline-block;
-  float: left;
+  float:left;
 }
 .background_pic{
   width: 1.5rem;
