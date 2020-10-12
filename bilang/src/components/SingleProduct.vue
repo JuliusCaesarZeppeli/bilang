@@ -137,13 +137,8 @@
       <p>¥ 899.00</p>
     </div>
     <!-- 购物车 -->
-<<<<<<< HEAD
-    <div class='shoppingCart'>
-      <img src="../assets/images/单品/单品_03.png" @click="$router.push('/Cart')">
-=======
     <div class='shoppingCart' @click="$router.push('/Cart')">
       <img src="../assets/images/单品/单品_03.png">
->>>>>>> 3a21f3f8247bd35376c38956332f9a2f30e46a49
     </div>
     <!-- 三道杠 -->
     <div class='ThreeBars' >
