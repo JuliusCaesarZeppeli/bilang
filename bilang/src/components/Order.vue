@@ -116,7 +116,7 @@
             </div>
           </div>
           <hr>
-          <div class="btnn">
+          <div class="btnn" @click="$router.push('/Evaluate')">
             <div class="show">评价&晒单</div>
             <img src="../assets/images/我的订单/icon.png" />
           </div>
@@ -142,7 +142,7 @@
             </div>
           </div>
           <hr>
-          <div class="btnn">
+          <div class="btnn" @click="$router.push('/Evaluate')">
             <div class="show">评价&晒单</div>
             <img src="../assets/images/我的订单/icon.png" />
           </div>
@@ -251,7 +251,7 @@
             </div>
           </div>
           <hr>
-          <div class="btnn">
+          <div class="btnn" @click="$router.push('/Evaluate')">
             <div class="show">评价&晒单</div>
             <img src="../assets/images/我的订单/icon.png" />
           </div>
@@ -277,7 +277,7 @@
             </div>
           </div>
           <hr>
-          <div class="btnn">
+          <div class="btnn" @click="$router.push('/Evaluate')">
             <div class="show">评价&晒单</div>
             <img src="../assets/images/我的订单/icon.png" />
           </div>

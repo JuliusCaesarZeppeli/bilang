@@ -8,6 +8,7 @@
   @click-left="onClickLeft"
   @click-right="onClickRight"
 />
+<<<<<<< HEAD
 
 
   <div class="first_clothes" v-for="(item,index) in cartsList" :key="item.id" >
@@ -31,6 +32,16 @@
         <p class="word_two">￥<span class="word_three">2000.00</span></p> 
         <van-stepper v-model="values"/>   
         <img class="del" src="../assets/images/购物车/del.png" >
+=======
+  <div class="first_clothes" v-for="(item,index) in Arr" :key="item.id">
+    <van-checkbox v-model="item.checked" class="checkbox" @click="radio"></van-checkbox>
+      <div class="background_pic"><img src="../assets/images/结算/pic_1.png"></div>
+      <div class="pic_right">
+        <p class="word_one">春秋商务休闲加肥加大胖子衬衣肥佬宽松中年正装长</p>
+        <p class="word_two">￥<span class="word_three">{{item.price}}</span></p> 
+        <van-stepper v-model="item.value" @change="changeValue"/>   
+        <img class="del" src="../assets/images/购物车/del.png" @click="del(index)">
+>>>>>>> ce90b0b82f4518b616b5e0d65c5238c12c0b39e7
       </div>
     </div> -->
 
@@ -44,6 +55,7 @@
             <p>去结算</p>
         </div>
     </div>
+<<<<<<< HEAD
   </div> -->
 
 
@@ -67,12 +79,16 @@
       </div>
     </div>
     <!-- 下面提交 -->
+=======
+    <!-- 下面提交 -->
+
+>>>>>>> ce90b0b82f4518b616b5e0d65c5238c12c0b39e7
     <div class="botton">
         <van-checkbox v-model="checkede" class="end" @click="check_all">全选</van-checkbox>
         <p>合计：￥{{sum}}</p>
         <p>数量：{{total}}</p>
         <div class="botton_right" @click="$router.push('/Fill')">
-            <img src="../assets/images/购物车/icon.png">
+            <img src="../assets/images/购物车/icon.png" >
             <p>去结算</p>
         </div>
     </div>
@@ -126,11 +142,14 @@
 
 export default {
   name:'Cart',
-      data(){
+    data(){
     return {
       Arr : [{id : 1,price : 1000,checked : false,value:1,subtotal:1000},
              {id : 2,price : 2000,checked : false,value:1,subtotal:2000},
+<<<<<<< HEAD
 
+=======
+>>>>>>> ce90b0b82f4518b616b5e0d65c5238c12c0b39e7
             ],
       checkede:false,
       values:1,
@@ -201,6 +220,12 @@ export default {
           this.sum += data.subtotal;
         }
       })
+<<<<<<< HEAD
+=======
+    },
+    xiaojie(){
+      
+>>>>>>> ce90b0b82f4518b616b5e0d65c5238c12c0b39e7
     }
   },
 }
@@ -235,7 +260,7 @@ export default {
   height:1.5rem;
 }
 .pic_right{
-  width:4 rem;
+  width:4rem;
   height:1.5rem;
   display: inline-block;
   box-sizing: border-box;

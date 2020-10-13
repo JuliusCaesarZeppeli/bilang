@@ -10,7 +10,7 @@
       @click-left="onClickLeft"
       @click-right="onClickRight"
     />
-    <div class="piece_">
+    <div class="piece_" @click="$router.push('/Reset_address')">
       <div class="piece_left">
         <div class="top">
           <span>李先生</span>
@@ -20,7 +20,7 @@
       </div>
       <div class="icon">默认</div>
     </div>
-    <div class="piece_">
+    <div class="piece_" @click="$router.push('/Reset_address')">
       <div class="piece_left">
         <div class="top">
           <span>李先生</span>

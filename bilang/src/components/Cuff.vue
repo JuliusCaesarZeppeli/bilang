@@ -25,7 +25,7 @@
       <span>(选填)</span>
     </p>
     <p>
-      <span>0.0</span>
+      <span><input type='text' value='0.0'></span>
       <span>cm</span>
     </p>
     <p>
